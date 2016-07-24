@@ -1,0 +1,14 @@
+# bash aliases/functions
+alias bup='brew update; brew upgrade; brew cleanup; brew prune'
+alias ..='cd ..'
+alias ...='cd ../../../'
+alias .4='cd ../../../../'
+alias .5='cd ../../../../..'
+
+function ff { osascript -e 'tell application "Finder"'\
+ -e "if (${1-1} <= (count Finder windows)) then"\
+ -e "get POSIX path of (target of window ${1-1} as alias)"\
+ -e 'else' -e 'get POSIX path of (desktop as alias)'\
+ -e 'end if' -e 'end tell'; };\
+
+function cdff { cd "`ff $@`"; }

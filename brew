@@ -1,0 +1,17 @@
+# brew install
+install newt
+install ctags
+install wget
+install cmake
+install autoconf
+install automake
+install openssl
+install caskroom/cask/brew-cask
+install git-extras
+install gcc
+install checkstyle
+install clang-format
+install protobuf
+install curl
+install gcc
+install tldr
